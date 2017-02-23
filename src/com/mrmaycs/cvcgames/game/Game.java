@@ -2,11 +2,11 @@ package com.mrmaycs.cvcgames.game;
 
 /**
  * Round Rock Tech Apps 2017
- *
- * This abstract class is for a tiled game such as chess or checkers
- *
  */
-public abstract class TiledGame extends Game {
+public abstract class Game {
+    protected GameBoard board;
+    protected Player[] players;
+
     //Initialize the GamePanel
     public abstract void init();
 
@@ -18,4 +18,9 @@ public abstract class TiledGame extends Game {
 
     //Return the default position for the player
     public abstract Position getDefaultPosition(Player player);
+
+    //Return the game board
+    public GameBoard getBoard() {
+        return board;
+    }
 }

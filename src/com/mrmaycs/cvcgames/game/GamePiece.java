@@ -4,6 +4,9 @@ import javax.swing.*;
 
 /**
  * Round Rock Tech Apps 2017
+ *
+ * This class represents one singular game piece
+ *
  */
 public class GamePiece {
     private boolean creator;
@@ -13,7 +16,7 @@ public class GamePiece {
     private String name;
     private TiledGame game;
 
-    //Constructor for a creator
+    //Constructor for a game piece creator
     public GamePiece(String name, ImageIcon icon, TiledGame game) {
         this.name = name;
         this.icon = icon;
@@ -33,14 +36,14 @@ public class GamePiece {
     //Create a single piece from one owner
     public GamePiece createPiece(Player owner) {
         if(!creator)
-            throw new IllegalStateException("Not a creator gamepiece");
+            throw new IllegalStateException("Not a gamepiece creator");
         return new GamePiece(name, icon, owner, game.getDefaultPosition(owner));
     }
 
     //Create multiple pieces from one owner
     public GamePiece[] createPieces(Player owner, int amount) {
         if(!creator)
-            throw new IllegalStateException("Not a creator gamepiece");
+            throw new IllegalStateException("Not a gamepiece creator");
         GamePiece[] pieces = new GamePiece[amount];
         for (int i = 0; i < pieces.length; i++)
             pieces[i] = new GamePiece(name, icon, owner, game.getDefaultPosition(owner));
@@ -56,14 +59,14 @@ public class GamePiece {
     //Return the owner of the game piece
     public Player getOwner() {
         if(!creator)
-            throw new IllegalStateException("Not a creator gamepiece");
+            throw new IllegalStateException("Not a valid gamepiece");
         return owner;
     }
 
     //Return the position of the game piece
     public Position getPosition() {
         if(!creator)
-            throw new IllegalStateException("Not a creator gamepiece");
+            throw new IllegalStateException("Not a valid gamepiece");
         return position;
     }
 }

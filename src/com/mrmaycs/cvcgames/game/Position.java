@@ -4,29 +4,30 @@ package com.mrmaycs.cvcgames.game;
  * Round Rock Tech Apps 2017
  *
  * This class is for keeping the position of a game piece
+ *
  */
 public class Position {
 
-    public int x, y;
+    public int row, column;
 
-    public Position(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Position(int row, int column) {
+        this.row = row;
+        this.column = column;
     }
 
-    public int getX() {
-        return x;
+    public int getRow() {
+        return row;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public int getY() {
-        return y;
+    public int getColumn() {
+        return column;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setColumn(int column) {
+        this.column = column;
     }
 }
