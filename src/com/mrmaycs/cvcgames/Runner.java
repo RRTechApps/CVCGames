@@ -7,6 +7,6 @@ package com.mrmaycs.cvcgames;
  */
 public class Runner {
     public static void main(String[] args) {
-
+        //Start the client gui
     }
 }

@@ -8,28 +8,28 @@
     * `public void setValue(int value) {`
     * `} else {`
 * Place end brace on it's own line
-    *       if (x == 4) {
+    *       if (row == 4) {
                 return;
             }
 * Space before parenthesis in conditionals
     * `if (condition) {`
 * Space before and after equals
-    * `int x = 4;`
+    * `int row = 4;`
 * Space after comma
-    * `int[] x = {1, 2, 3};`
+    * `int[] row = {1, 2, 3};`
 * Comments pre line
     *       //Loop through half the array's length since sqrt must be less than 1/2 
             for(int i = 0; i < arr.length / 2; i++)
 * Add lines between methods
-    *       public int getX() { return x; }
+    *       public int getX() { return row; }
             
-            public int getY() { return y; }
+            public int getY() { return column; }
 ##Code
 * No spaghetti code
 * Use methods where duplicate code exists
 * Comment code to explain, do not comment everything
     * Don't do this:
     
-          //Set x to 4
-          int x = 4;
+          //Set row to 4
+          int row = 4;
 * Use lowest scope possible
