@@ -15,9 +15,25 @@ public class GamePanel extends JPanel {
         this.game = game;
     }
 
+    public GamePanel() {
+        this.game = null;
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        this.game.getBoard().drawBoard(g, this.getWidth(), this.getHeight());
+        if (this.game != null)
+            this.game.getBoard().drawBoard(g, this.getWidth(), this.getHeight());
+    }
+
+    public static GridBagConstraints getConstraints() {
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 2;
+        constraints.gridy = 1;
+        constraints.weightx = 5;
+        constraints.weighty = 5;
+        constraints.gridheight = 2;
+        constraints.gridwidth = 2;
+        return constraints;
     }
 }
