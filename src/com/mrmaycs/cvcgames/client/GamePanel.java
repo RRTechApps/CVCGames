@@ -28,7 +28,7 @@ public class GamePanel extends JPanel {
 
     public static GridBagConstraints getConstraints() {
         GridBagConstraints constraints = new GridBagConstraints();
-        constraints.gridx = 2;
+        constraints.gridx = 1;
         constraints.gridy = 1;
         constraints.weightx = 5;
         constraints.weighty = 5;

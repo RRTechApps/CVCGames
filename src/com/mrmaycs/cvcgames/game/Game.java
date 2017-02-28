@@ -4,7 +4,7 @@ package com.mrmaycs.cvcgames.game;
  * Round Rock Tech Apps 2017
  */
 public abstract class Game {
-    protected GameBoard board;
+    private GameBoard board;
     protected Player[] players;
 
     //Initialize the GamePanel
